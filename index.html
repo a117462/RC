@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfólio & Página Pessoal - Victor Zenco</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Ícones Font Awesome para um toque profissional -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <!-- Navegação -->
+    <nav class="navbar">
+        <div class="logo">Victor Zenco</div>
+        <ul class="nav-links">
+            <li><a href="#sobre">Sobre</a></li>
+            <li><a href="#formacao">Formação</a></li>
+            <li><a href="#especializacoes">Especializações</a></li>
+            <li><a href="#caracteristicas">Características</a></li>
+            <li><a href="#cv">Curriculum Vitae</a></li>
+        </ul>
+    </nav>
+
+    <!-- Cabeçalho / Hero -->
+    <header class="hero">
+        <div class="hero-content">
+            <h1>Olá, sou o <span>Victor Zenco</span></h1>
+            <p class="tagline">Estudante de TGPSI | Desenvolvedor Web | Programador | Modelador 3D</p>
+            <div class="hero-buttons">
+                <a href="#cv" class="btn btn-primary">Ver CV</a>
+                <a href="https://github.com/Znkco-ui" target="_blank" class="btn btn-secondary"><i class="fab fa-github"></i> GitHub</a>
+            </div>
+        </div>
+    </header>
+
+    <main class="container">
+
+        <section id="sobre" class="card">
+            <h2><i class="fas fa-user-circle"></i> Sobre Mim</h2>
+            <p>
+                Me chamo Victor Zenco, tenho 17 anos e sou estudante do Curso Técnico de Gestão e Programação de Sistemas Informáticos (TGPSI) na Escola Secundária de Gondomar (ESG). Focado no desenvolvimento web, lógica de programação e criação de modelos 3D. Procuro melhorar continuamente competências práticas que me permitam desenvolver websites ou apps
+            </p>
+        </section>
+
+        <section id="formacao" class="card">
+            <h2><i class="fas fa-graduation-cap"></i> Formação Académica</h2>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <span class="date">Em Curso</span>
+                    <h3>Curso Técnico de Gestão e Programação de Sistemas Informáticos (TGPSI)</h3>
+                    <p class="institution">Escola Secundária (ESG)</p>
+                    <ul>
+                        <li>Desenvolvimento da lógica de programação e linguagens orientadas à web.</li>
+                        <li>Sistemas de informação, arquitetura de computadores e redes de comunicação.</li>
+                        <li>Trabalho em projetos práticos individuais e de grupo.</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section id="especializacoes" class="card">
+            <h2><i class="fas fa-laptop-code"></i> Especializações & Competências</h2>
+            <div class="skills-grid">
+                
+                <div class="skill-box">
+                    <i class="fas fa-code"></i>
+                    <h3>Desenvolvimento Web</h3>
+                    <p>Criação e estruturação de páginas interativas e modernas em HTML5 e estilização avançada com CSS3.</p>
+                </div>
+
+                <div class="skill-box">
+                    <i class="fas fa-cubes"></i>
+                    <h3>Modelação 3D</h3>
+                    <p>Desenvolvimento e renderização de objetos tridimensionais, cenários e elementos para jogos ou arte digital.</p>
+                </div>
+
+                <div class="skill-box">
+                    <i class="fas fa-terminal"></i>
+                    <h3>Lógica de Programação</h3>
+                    <p>Resolução de problemas através de algoritmos, estruturas de dados e desenvolvimento de software.</p>
+                </div>
+
+                <div class="skill-box">
+                    <i class="fas fa-tools"></i>
+                    <h3>Ferramentas de Trabalho</h3>
+                    <p>Controle de versões com Git e GitHub, gestão de código com Visual Studio Code e ambientes locais (XAMPP).</p>
+                </div>
+
+            </div>
+        </section>
+
+        <section id="caracteristicas" class="card">
+            <h2><i class="fas fa-star"></i> Características e Qualidades</h2>
+            <div class="badge-container">
+                <span class="badge"><i class="fas fa-check"></i> Resolução de Problemas</span>
+                <span class="badge"><i class="fas fa-check"></i> Aprendizagem Rápida</span>
+                <span class="badge"><i class="fas fa-check"></i> Pensamento Criativo</span>
+                <span class="badge"><i class="fas fa-check"></i> Atenção ao Detalhe</span>
+                <span class="badge"><i class="fas fa-check"></i> Trabalho em Equipa</span>
+                <span class="badge"><i class="fas fa-check"></i> Curiosidade Tecnológica</span>
+            </div>
+        </section>
+
+        <section id="cv" class="card">
+            <h2><i class="fas fa-file-alt"></i> Curriculum Vitae</h2>
+            <p>Podes checar o meu currículo completo diretamente abaixo ou baixar no formato PDF.</p>
+            
+            <div class="botoes-cv">
+                <button onclick="alternarCV()" class="btn btn-primary"><i class="fas fa-eye"></i> Ver / Ocultar CV</button>
+                <a href="CV.zenco.pdf" download="CV_Victor_Zenco.pdf" class="btn btn-success"><i class="fas fa-download"></i> Descarregar PDF</a>
+            </div>
+
+            <div id="cv-preview" class="cv-oculto">
+                <iframe src="CV.zenco.pdf" width="100%" height="650px">
+                    O teu navegador não suporta a visualização de PDFs. <a href="CV.zenco.pdf">Clique aqui para descarregar</a>.
+                </iframe>
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Victor Zenco. | Desenvolvido na aula de Redes do curso TGPSI.</p>
+    </footer>
+
+    <script>
+        function alternarCV() {
+            var cvElemento = document.getElementById("cv-preview");
+            if (cvElemento.style.display === "none" || cvElemento.style.display === "") {
+                cvElemento.style.display = "block";
+            } else {
+                cvElemento.style.display = "none";
+            }
+        }
+    </script>
+
+</body>
+</html>
